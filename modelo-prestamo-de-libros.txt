@@ -1,0 +1,61 @@
+Prestamo de libros en bibliotecas
+- Libros
+    - Titulo
+    - Editorial
+        - Nombre
+        - Domicilio
+        - País
+        - Telefono
+        - Email
+        - Web
+    - Fecha de edición
+    - Autor(es)
+        - Nombre
+        - Nacionalidad
+        - Edad
+        - Email
+        - Web
+        - Genero
+    - Categoria(s)
+        - Nombre
+        - categoria padre
+    - Número de páginas
+    - ISBN
+    - Idioma
+    - Portada
+    - Dimensiones
+- Solicitantes
+    - Alumnos
+        - Nombre
+        - Matricula
+        - Carrera
+        - Grado escolar
+        - Telefono
+        - Email
+        - Domicilio
+        - Firma
+        - Fotografia
+    - Docentes
+        - Nombre
+        - Número de empleado
+        - Carrera
+        - Telefono
+        - Email
+        - Domicilio
+        - Firma
+- Bibliotecario
+    - Nombre
+    - Número de empleado
+    - Telefono
+    * Prestar libros
+- Prestamo
+    - Fecha de prestamo
+    - Fecha de retorno
+    - Solicitante
+    - Bibliotecario
+    - Libro(s)
+    * Imprimir comprobante de prestamo
+- Inventario
+    - Libro
+    - Existencia (núm de ejemplares)
+    - Fecha de ingreso
