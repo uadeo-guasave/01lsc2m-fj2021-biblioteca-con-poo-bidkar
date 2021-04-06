@@ -1,9 +1,9 @@
 namespace biblioteca
 {
-    class Categoria
+    class Bibliotecario
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public Categoria CategoriaPadre { get; set; }
+        public int NúmeroDeEmpleado { get; set; }
     }
 }

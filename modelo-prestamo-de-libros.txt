@@ -26,28 +26,28 @@ Prestamo de libros en bibliotecas
     - Dimensiones
 - Solicitantes
     - Alumnos
-        - Nombre
+        - Nombre *
         - Matricula
         - Carrera
         - Grado escolar
-        - Telefono
-        - Email
-        - Domicilio
-        - Firma
-        - Fotografia
+        - Telefono *
+        - Email *
+        - Domicilio *
+        - Firma X
+        - Fotografia X
     - Docentes
         - Nombre
         - Número de empleado
-        - Carrera
+        - Departamento
         - Telefono
         - Email
         - Domicilio
-        - Firma
+        - Firma X
 - Bibliotecario
     - Nombre
     - Número de empleado
-    - Telefono
-    * Prestar libros
+    - Telefono X
+    * Prestar libros X
 - Prestamo
     - Fecha de prestamo
     - Fecha de retorno
