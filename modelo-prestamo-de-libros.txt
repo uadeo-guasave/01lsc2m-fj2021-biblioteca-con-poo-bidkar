@@ -53,7 +53,7 @@ Prestamo de libros en bibliotecas
     - Fecha de retorno
     - Solicitante
     - Bibliotecario
-    - Libro(s)
+    - Libro(s) Folios
     * Imprimir comprobante de prestamo
 - Inventario
     - Libro
