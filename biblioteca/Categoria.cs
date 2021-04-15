@@ -1,9 +1,10 @@
 namespace biblioteca
 {
-    class Categoria
+    class Categoria : Biblioteca
     {
-        public int Id { get; set; }
         public string Nombre { get; set; }
         public Categoria CategoriaPadre { get; set; }
+
+        public Categoria() : base() { }
     }
 }
