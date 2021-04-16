@@ -1,9 +1,10 @@
 namespace biblioteca
 {
-    class Bibliotecario
+    class Bibliotecario : Biblioteca
     {
-        public int Id { get; set; }
         public string Nombre { get; set; }
         public int NúmeroDeEmpleado { get; set; }
+
+        public Bibliotecario() : base() { }
     }
 }

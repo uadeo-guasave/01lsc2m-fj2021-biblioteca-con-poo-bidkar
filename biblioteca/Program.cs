@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace biblioteca
 {
@@ -10,6 +11,12 @@ namespace biblioteca
         static Categoria categoria1 = new Categoria();
         static Categoria categoria2 = new Categoria();
         static Libro libro1 = new Libro();
+        static Alumno alumno1 = new Alumno();
+        static Docente docente1 = new Docente();
+        static Bibliotecario bibliotecario1 = new Bibliotecario();
+        public static List<Inventario> inventarios = new List<Inventario>();
+        static Prestamo prestamo1 = new Prestamo();
+        static Prestamo prestamo2 = new Prestamo();
         static void Main(string[] args)
         {
             // Console.WriteLine("Hello World!");
@@ -27,6 +34,89 @@ namespace biblioteca
 
             // imprimir libros
             libro1.Imprimir();
+
+            // crear alumnos
+            CrearAlumnos();
+
+            // crear docentes
+            CrearDocentes();
+
+            // crear bibliotecario
+            CrearBibliotecario();
+
+            // crear inventarios
+            CrearInventarios();
+
+            // crear prestamos
+            CrearPrestamos();
+
+            // imprimir comprobante de salida
+            prestamo1.ImprimirComprobanteDeSalida();
+            prestamo2.ImprimirComprobanteDeSalida();
+        }
+
+        static void CrearPrestamos()
+        {
+            prestamo1.FechaDeSalida = new DateTime(2021,04,15);
+            prestamo1.Solicitante = alumno1;
+            prestamo1.Bibliotecario = bibliotecario1;
+            // prestamo1.FoliosDeLibros = new List<int>();
+            prestamo1.FoliosDeLibros.Add(1);
+
+            prestamo2.FechaDeSalida = new DateTime(2021,04,10);
+            prestamo2.FechaDeRetorno = new DateTime(2021,04,12);
+            prestamo2.Solicitante = docente1;
+            prestamo2.Bibliotecario = bibliotecario1;
+            prestamo2.FoliosDeLibros.Add(9);
+
+            Console.WriteLine("Prestamos creados correctamente");
+        }
+
+        static void CrearInventarios()
+        {
+            var ejemplares1 = new Inventario {
+                Libro = libro1,
+                Existencia = 10,
+                FechaDeIngreso = new DateTime(2021,04,01),
+                FolioDesde = 1,
+                FolioHasta = 10
+            };
+
+            inventarios.Add(ejemplares1);
+            Console.WriteLine("Inventarios creados correctamente");
+        }
+
+        static void CrearBibliotecario()
+        {
+            bibliotecario1.Nombre = "Monica Gaxiola";
+            bibliotecario1.NúmeroDeEmpleado = 2000;
+
+            Console.WriteLine("Bibliotecario creado correctamente");
+        }
+
+        static void CrearDocentes()
+        {
+            docente1.Nombre = "Juan Carlos Lopez";
+            docente1.Teléfono = "6871234567";
+            docente1.CorreoElectrónico = "juan.lopez@uadeo.mx";
+            docente1.Domicilio = "Guasave";
+            docente1.NúmeroDeEmpleado = 1200;
+            docente1.Departamento = "Ciencias Economico-Administrativas";
+
+            Console.WriteLine("Docente creado correctamente");
+        }
+
+        static void CrearAlumnos()
+        {
+            alumno1.Nombre = "Bidkar Aragón";
+            alumno1.Teléfono = "6871234567";
+            alumno1.CorreoElectrónico = "alumno1@uadeo.mx";
+            alumno1.Domicilio = "Guasave";
+            alumno1.Matricula = "9730035";
+            alumno1.Carrera = "Sistemas Computacionales";
+            alumno1.Semestre = 2;
+
+            Console.WriteLine("Alumno creado correctamente");
         }
 
         static void CrearLibros()

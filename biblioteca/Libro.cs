@@ -19,7 +19,9 @@ namespace biblioteca
 
         public void Imprimir()
         {
+            Console.WriteLine("\n------------------------------------------------------");
             Console.WriteLine($"Libro {Id}: {Titulo}");
+            Console.WriteLine("------------------------------------------------------");
             Console.WriteLine($"Editorial {Editorial.Id}: {Editorial.Nombre}");
             Console.WriteLine($"Edición: {FechaDeEdición.ToString()}");
 
@@ -27,10 +29,8 @@ namespace biblioteca
             if (Autores.Count == 0) {
                 // imprimir autor anonimo
                 Console.WriteLine("Autor anónimo");
-            } else if (Autores.Count == 1) {
-                Console.WriteLine($"Autor {Autores[0].Id}: {Autores[0].Nombre} {Autores[0].Apellido}");
             } else {
-                // cuando haya mas de un autor
+                // cuando haya uno o mas de un autor
                 foreach (var autor in Autores)
                 {
                     Console.WriteLine($"Autor {autor.Id}: {autor.Nombre} {autor.Apellido}");
@@ -50,7 +50,7 @@ namespace biblioteca
             Console.WriteLine($"Páginas: {NúmeroDePáginas}");
             Console.WriteLine($"ISBN: {Isbn}");
             Console.WriteLine($"Idioma: {Idioma}");
-            Console.WriteLine($"Postada: {Portada}");
+            Console.WriteLine($"Postada: {Portada}\n");
 
         }
     }
